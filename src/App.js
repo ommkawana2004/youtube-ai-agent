@@ -3,6 +3,7 @@ import ScriptWriter from './ScriptWriter';
 import ImageGenerator from './ImageGenerator';
 import VoiceoverStudio from './VoiceoverStudio';
 import ThumbnailMaker from './ThumbnailMaker';
+import MusicPicker from './MusicPicker';
 
 const tools = [
   { id: 1, icon: '🎬', title: 'Full Video Creator', desc: 'Create complete YouTube video from 1 prompt', color: '#FF0000' },
@@ -100,6 +101,7 @@ function App() {
         {activeTool?.title === 'Image Generator' && <ImageGenerator />}
         {activeTool?.title === 'Voiceover Studio' && <VoiceoverStudio />}
         {activeTool?.title === 'Thumbnail Maker' && <ThumbnailMaker />}
+        {activeTool?.title === 'Music Picker' && <MusicPicker />}
 
         {/* DASHBOARD - show when no tool selected */}
         {!activeTool && (
