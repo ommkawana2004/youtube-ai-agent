@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ScriptWriter from './ScriptWriter';
 import ImageGenerator from './ImageGenerator';
+import VoiceoverStudio from './VoiceoverStudio';
 
 const tools = [
   { id: 1, icon: '🎬', title: 'Full Video Creator', desc: 'Create complete YouTube video from 1 prompt', color: '#FF0000' },
@@ -96,6 +97,7 @@ function App() {
         {/* SCRIPT WRITER PAGE */}
         {activeTool?.title === 'Script Writer' && <ScriptWriter />}
         {activeTool?.title === 'Image Generator' && <ImageGenerator />}
+        {activeTool?.title === 'Voiceover Studio' && <VoiceoverStudio />}
 
         {/* DASHBOARD - show when no tool selected */}
         {!activeTool && (
